@@ -1,0 +1,195 @@
+<div class="container">
+    <div class="row">
+        <h2>Add Invoice</h2><br><br>
+    </div>
+    <form [formGroup]="gstr2form">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group form-group-sm">
+                    <label for="firstname" class="control-label">gstin</label>
+                    <input type="text" class="form-control" id="firstname" formControlName="gstin">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="lastname" class="control-label">fp</label>
+                    <input type="number" class="form-control" id="lastname" formControlName="fp">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="lastname" class="control-label">ctin</label>
+                    <input type="number" class="form-control" id="lastname" formControlName="ctin">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="lastname" class="control-label">idt</label>
+                    <input type="number" class="form-control" id="lastname" formControlName="idt">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="lastname" class="control-label">val</label>
+                    <input type="text" class="form-control" id="lastname" formControlName="val">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="lastname" class="control-label">pos</label>
+                    <input type="text" class="form-control" id="lastname" formControlName="pos">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="lastname" class="control-label">rchrg</label>
+                    <input type="date" class="form-control" id="lastname" formControlName="rchrg">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="lastname" class="control-label">inv_typ</label>
+                    <input type="number" class="form-control" id="lastname" formControlName="inv_typ">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="checkbox">
+                <label><input type="checkbox" value="">Supply attract reverse charge</label>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="checkbox">
+                <label><input type="checkbox" value="">Tax on this voice is paid</label>
+            </div>
+        </div><br><br>
+        
+            <h2>Item Details</h2><br><br>
+        
+       
+            <div class="col-md-4">
+                <div class="form-group form-group-sm">
+                    <label for="firstname" class="control-label">num</label>
+                    <input type="number" class="form-control" id="firstname" formControlName="num">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-group-sm">
+                    <label for="firstname" class="control-label">rt</label>
+                    <input type="text" class="form-control" id="firstname" formControlName="rt">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-group-sm">
+                    <label for="firstname" class="control-label">txval</label>
+                    <input type="text" class="form-control" id="firstname" formControlName="txval">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-group-sm">
+                    <label for="firstname" class="control-label">iamt</label>
+                    <input type="text" class="form-control" id="firstname" formControlName="iamt">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-group-sm">
+                    <label for="firstname" class="control-label">camt</label>
+                    <input type="number" class="form-control" id="firstname" formControlName="camt">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-group-sm">
+                    <label for="firstname" class="control-label">samt</label>
+                    <input type="number" class="form-control" id="firstname" formControlName="samt">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-group-sm">
+                    <label for="firstname" class="control-label">csamt</label>
+                    <input type="number" class="form-control" id="firstname" formControlName="csamt">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-group-sm">
+                    <label for="firstname" class="control-label">elg</label>
+                    <input type="number" class="form-control" id="firstname" formControlName="elg">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-group-sm">
+                    <label for="firstname" class="control-label">tx_i</label>
+                    <input type="number" class="form-control" id="firstname" formControlName="tx_i">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-group-sm">
+                    <label for="firstname" class="control-label">tx_s</label>
+                    <input type="number" class="form-control" id="firstname" formControlName="tx_s">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-group-sm">
+                    <label for="firstname" class="control-label">tx_c</label>
+                    <input type="text" class="form-control" id="firstname" formControlName="tx_c">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-group-sm">
+                    <label for="firstname" class="control-label">tx_cs</label>
+                    <input type="date" class="form-control" id="firstname" formControlName="tx_cs">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-group-sm">
+                    <label for="firstname" class="control-label">flag</label>
+                    <input type="number" class="form-control" id="firstname" formControlName="flag">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-group-sm">
+                    <label for="firstname" class="control-label">chksum</label>
+                    <input type="number" class="form-control" id="firstname" formControlName="chksum">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-group-sm">
+                    <label for="firstname" class="control-label">sply_ty</label>
+                    <input type="text" class="form-control" id="firstname" formControlName="sply_ty">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-group-sm">
+                    <label for="firstname" class="control-label">ntty</label>
+                    <input type="text" class="form-control" id="firstname" formControlName="ntty">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-group-sm">
+                    <label for="firstname" class="control-label">nt_num</label>
+                    <input type="number" class="form-control" id="firstname" formControlName="nt_num">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-group-sm">
+                    <label for="firstname" class="control-label">nt_dt</label>
+                    <input type="number" class="form-control" id="firstname" formControlName="expt_amt">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-group-sm">
+                    <label for="firstname" class="control-label">nil_amt</label>
+                    <input type="number" class="form-control" id="firstname" formControlName="nil_amt">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="form-group form-group-sm">
+                    <label for="firstname" class="control-label">ngsup_amt</label>
+                    <input type="number" class="form-control" id="firstname" formControlName="ngsup_amt">
+                </div>
+
+
+            </div>
+            <button type="button" class="btn btn-success" (click)="savegstr2obj(gstr2form.value)">Add</button>
+            <button type="button" class="btn btn-danger">Cancel</button>
+    </form>
+</div>

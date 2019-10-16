@@ -1,0 +1,72 @@
+<div class="app-title">
+  <div>
+      <h1><i class="fa fa-th-list"></i> B2CS-Invoice</h1>
+  </div>
+  <ul class="app-breadcrumb breadcrumb">
+  </ul>
+</div>
+<div class="tile">
+
+  <table class="table">
+      <thead>
+          <tr style="font-size:15px">
+
+              <th>Supply Type</th>
+
+              <th>Taxable value of Goods or Service as per invoice</th>
+
+              <th>Type</th>
+
+              <th>etin</th>
+
+              <th>Differential percentage</th>
+
+              <th>Place of Supply</th>
+
+              <th>Rate of Invoice</th>
+
+              <th>IGST Amount as per invoice</th>
+
+              <th>CGST Amount as per invoice</th>
+
+              <th>SGST Amount as per invoice</th>
+
+              <th>Cess Amount as per invoice</th>
+
+
+          </tr>
+
+      </thead>
+      <tbody>
+
+          <tr *ngFor="let d of getb2csdata">
+
+              <td>{{d.sply_ty}}</td>
+
+              <td>{{d.txval}}</td>
+
+              <td>{{d.typ}}</td>
+
+              <td>{{d.etin}}</td>
+
+              <td>{{d.diff_percent}}</td>
+
+              <td>{{d.pos}}</td>
+
+              <td>{{d.rt}}</td>
+
+              <td>{{d.iamt}}</td>
+
+              <td>{{d.camt}}</td>
+
+              <td>{{d.samt}}</td>
+
+              <td>{{d.csamt}}</td>
+
+
+          </tr>
+      </tbody>
+
+  </table>
+
+</div>

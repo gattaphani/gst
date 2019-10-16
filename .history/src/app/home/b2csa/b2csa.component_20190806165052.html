@@ -1,0 +1,35 @@
+<div class="tile">
+  <table>
+    <tr>
+      <th>Original Month of Invoice</th>
+      <th>Supply Type</th>
+      <th>Differential percentage</th>
+      <th>Type </th>
+      <th>Ecom Operator Gstin</th>
+      <th>Place of Supply</th>
+      <th>Rate</th>
+      <th>Taxable value of Goods or Service as per invoice</th>
+      <th>IGST Amount as per invoice</th>
+      <th>CGST Amount as per invoice</th>
+      <th>cess Amount as per invoice</th>
+      
+
+    </tr>
+    <tr *ngFor="let d of b2csaArr">
+      <td>{{d.b2csa[0].omon}}</td>
+      <td>{{d.b2csa[0].sply_ty}}</td>
+      <td>{{d.b2csa[0].diff_percent}}</td>
+      <td>{{typ}}</td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+
+    </tr>
+  </table>
+</div>

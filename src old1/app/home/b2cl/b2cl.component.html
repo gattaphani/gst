@@ -1,0 +1,70 @@
+<div class="app-title">
+  <div>
+    <h1><i class="fa fa-th-list"></i> B2CL-Invoice</h1>
+  </div>
+  <ul class="app-breadcrumb breadcrumb">
+  </ul>
+</div>
+<div class="tile">
+
+  <table class="table">
+      <thead>
+          <tr style="font-size:15px">
+
+              <th>Place of Supply</th>
+
+              <th>invoice number</th>
+
+              <th>Invoice date</th>
+
+              <th>Differential value</th>
+
+              <th>Invoice type</th>
+
+              <th>Ecom Operator Gstin</th>
+
+              <th>Differential percentage</th>
+
+              <th>Rate of Invoice</th>
+
+              <th>Taxable value of Goods or Service as per invoice</th>
+
+              <th>IGST Amount as per invoice</th>
+
+              <th>Cess Amount as per invoice</th>
+
+          </tr>
+
+      </thead>
+      <tbody>
+          <tr *ngFor="let d of getb2cldataArr">
+
+              <td>{{d.b2cl[0].pos}}</td>
+
+              <td>{{d.b2cl[0].inv[0].inum}}</td>
+
+              <td>{{d.b2cl[0].inv[0].idt}}</td>
+
+              <td>{{d.b2cl[0].inv[0].val}}</td>
+
+              <td>{{d.b2cl[0].inv[0].inv_typ}}</td>
+
+              <td>{{d.b2cl[0].inv[0].etin}}</td>
+
+              <td>{{d.b2cl[0].inv[0].diff_percent}}</td>
+
+              <td>{{d.b2cl[0].inv[0].itms[0].itm_det.rt}}</td>
+
+              <td>{{d.b2cl[0].inv[0].itms[0].itm_det.txval}}</td>
+
+              <td>{{d.b2cl[0].inv[0].itms[0].itm_det.iamt}}</td>
+
+              <td>{{d.b2cl[0].inv[0].itms[0].itm_det.csamt}}</td>
+
+
+          </tr>
+
+      </tbody>
+  </table>
+
+</div>

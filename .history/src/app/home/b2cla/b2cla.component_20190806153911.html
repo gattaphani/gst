@@ -1,0 +1,63 @@
+<table>
+  <tr>
+    <th>Place of supply</th>
+    <th>Supplier Invoice Number</th>
+    <th>Supplier Invoice Date</th>
+    <th>Supplier Invoice Value</th>
+    <th>Invoice type</th>
+    <th>Ecommerce Gstin</th>
+    <th>Differential percentage</th>
+    <th>Serial no</th>
+    <th>Rate</th>
+    <th>Taxable value of Goods or Service as per invoice</th>
+    <th>IGST Amount as per invoice</th>
+    <th>cess Amount as per invoice</th>
+  </tr>
+  <tr *ngFor="let d of b2claArr">
+    <td>{{d.b2cla[0].pos}}</td>
+    <td>{{d.b2cla[0].inv[0].inum}}</td>
+    <td>{{d.b2cla[0].inv[0].idt}}</td>
+    <td>{{d.b2cla[0].inv[0].val}}</td>
+    <td>{{d.b2cla[0].inv[0].inv_typ}}</td>
+    <td>{{d.b2cla[0].inv[0].etin}}</td>
+    <td>{{d.b2cla[0].inv[0].diff_percent}}</td>
+    <td>{{d.b2cla[0].inv[0].}}</td>
+    <td>{{d.b2cla[0].inv[0].diff_percent}}</td>
+    <td>{{d.b2cla[0].pos}}</td>
+    <td>{{d.b2cla[0].inv[0].inum}}</td>
+    <td>{{d.b2cla[0].inv[0].inum}}</td>
+    
+  </tr>
+</table>
+{
+  "b2cl": [
+      {
+          "id": 1000,
+          "pos": "05",
+          "inv": [
+              {
+                  "id": 1001,
+                  "inum": "92661",
+                  "idt": "10-01-2016",
+                  "val": 784586.33,
+                  "inv_typ": "CBW",
+                  "etin": "27AHQPA8875L1CU",
+                  "diff_percent": 0.65,
+                  "itms": [
+                      {
+                          "id": 1003,
+                          "num": 1,
+                          "itm_det": {
+                              "id": 1002,
+                              "rt": 5,
+                              "txval": 10000,
+                              "iamt": 325,
+                              "csamt": 500
+                          }
+                      }
+                  ]
+              }
+          ]
+      }
+  ]
+}

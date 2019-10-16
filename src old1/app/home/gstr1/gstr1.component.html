@@ -1,0 +1,19 @@
+<div class="row mt-5">
+    <div class="col-md-4">
+
+        <div class="card bg-info text-white mb-3" (click)="onSelect(item)" *ngFor="let item of departments">
+
+            <div class="card-body text-center p-4  bg-color ">
+                <a (click)="gstr1()">
+                    <h3>{{item.name}}</h3>
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</div>

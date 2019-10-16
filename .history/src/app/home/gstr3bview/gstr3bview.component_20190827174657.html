@@ -1,0 +1,53 @@
+
+<br><br>
+<div class="app-title">
+    <div>
+      <h1><i class="fa fa-th-list"></i> CDN-Invoice</h1>
+    </div>
+    <ul class="app-breadcrumb breadcrumb">
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="term" placeholder="Search Here...">
+      </div>
+    </div>
+    <div class="col-md-9">
+        <button type="button" style="margin-bottom:8px" class="btn btn-success float-right" data-toggle="modal"
+        data-backdrop="static" data-target="#myModal1"  (click)="gstr3b()">gstr3b dashboard</button>
+    </div>
+  </div>
+  <div class="tile">
+  
+    <table class="table">
+      <thead>
+        <tr style="font-size:15px">
+  
+         
+          <!-- <th>ctin</th> -->
+          <th>Taxable value of Goods or Service as per invoice</th>
+          <th>IGST Amount as per invoice</th>
+          <th>cess Amount as per invoice</th>
+          <th>Rate</th>
+          <th>txval</th>
+          
+          
+        </tr>
+      </thead>
+      <tbody>
+  
+        <tr *ngFor="let gst of gstr3bdata;let i=index">
+
+          <td>{{gst.sup_details.osup_det.txval}}</td>
+          <td>{{gst.sup_details.osup_det.iamt}}</td>
+          <td>{{gst.sup_details.osup_det.csamt}}</td>
+          <td>{{gst.sup_details.osup_det.rt}}</td>
+          <td>{{gst.sup_details.osup_det.csamt}}</td>
+          
+          
+       
+        </tr>
+      </tbody>
+    </table>
+  </div>

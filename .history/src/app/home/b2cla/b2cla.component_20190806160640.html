@@ -1,0 +1,31 @@
+<table class="table table-bordered">
+  <tr>
+    <th>Place of supply</th>
+    <th>Supplier Invoice Number</th>
+    <th>Supplier Invoice Date</th>
+    <th>Supplier Invoice Value</th>
+    <th>Invoice type</th>
+    <th>Ecommerce Gstin</th>
+    <th>Differential percentage</th>
+    <th>Serial no</th>
+    <th>Rate</th>
+    <th>Taxable value of Goods or Service as per invoice</th>
+    <th>IGST Amount as per invoice</th>
+    <th>cess Amount as per invoice</th>
+  </tr>
+  <tr *ngFor="let d of b2claArr">
+    <td>{{d.b2cla[0].pos}}</td>
+    <td>{{d.b2cla[0].inv[0].inum}}</td>
+    <td>{{d.b2cla[0].inv[0].idt}}</td>
+    <td>{{d.b2cla[0].inv[0].val}}</td>
+    <td>{{d.b2cla[0].inv[0].inv_typ}}</td>
+    <td>{{d.b2cla[0].inv[0].etin}}</td>
+    <td>{{d.b2cla[0].inv[0].diff_percent}}</td>
+    <td>{{d.b2cla[0].inv[0].itms[0].num}}</td>
+    <td>{{d.b2cla[0].inv[0].itms[0].itm_det.rt}}</td>
+    <td>{{d.b2cla[0].inv[0].itms[0].itm_det.txval}}</td>
+    <td>{{d.b2cla[0].inv[0].itms[0].itm_det.iamt}}</td>
+    <td>{{d.b2cla[0].inv[0].itms[0].itm_det.csamt}}</td>
+    
+  </tr>
+</table>

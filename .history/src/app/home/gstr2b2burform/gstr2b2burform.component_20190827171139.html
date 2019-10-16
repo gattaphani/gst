@@ -1,0 +1,421 @@
+<br><br>
+<form [formGroup]="gstr2form">
+   
+  <div class="tile">
+    <div class="row">
+      <div class="col-md-4">
+          <div class="form-group form-group-sm">
+              <label for="gstin" class="control-label">gstin</label>
+              <input type="text" class="form-control" formControlName="gstin">
+              <!-- validation-->
+
+              <span style="color:red"
+              *ngIf="gstr2form.get('gstin').touched && gstr2form.get('gstin').invalid">
+
+              <span *ngIf="gstr2form.get('gstin').errors.required">
+
+                gstin of the Tax Payer required
+
+              </span>
+
+          </span>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="form-group">
+              <label for="fp" class="control-label">fp</label>
+              <input type="text" class="form-control" formControlName="fp">
+              <!-- validation-->
+
+              <span style="color:red"
+              *ngIf="gstr2form.get('fp').touched && gstr2form.get('fp').invalid">
+
+              <span *ngIf="gstr2form.get('fp').errors.required">
+
+                fp of the Tax Payer required
+
+              </span>
+
+          </span>
+          </div>
+      </div>
+  </div>
+
+  <h4>b2b</h4>
+  <div class="row">
+      <div class="col-md-4">
+          <div class="form-group">
+              <label for="ctin" class="control-label">ctin</label>
+              <input type="text" class="form-control" formControlName="ctin">
+              <!-- validation-->
+
+              <span style="color:red"
+              *ngIf="gstr2form.get('ctin').touched && gstr2form.get('ctin').invalid">
+
+              <span *ngIf="gstr2form.get('ctin').errors.required">
+
+                ctin of the Tax Payer required
+
+              </span>
+
+          </span>
+          </div>
+      </div>
+  </div> 
+    <h4>b2bur</h4>
+    <h4>inv</h4>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="chksumb2bur" class="control-label">chksum</label>
+                <input type="text" class="form-control" formControlName="chksumb2bur">
+                <!-- validation-->
+
+               <span style="color:red"
+               *ngIf="gstr2form.get('chksumb2bur').touched && gstr2form.get('chksumb2bur').invalid">
+
+               <span *ngIf="gstr2form.get('chksumb2bur').errors.required">
+
+                chksumb2bur of the Tax Payer required
+
+               </span>
+
+           </span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="inumb2bur" class="control-label">inum</label>
+                <input type="text" class="form-control" formControlName="inumb2bur">
+                <!-- validation-->
+
+               <span style="color:red"
+               *ngIf="gstr2form.get('inumb2bur').touched && gstr2form.get('inumb2bur').invalid">
+
+               <span *ngIf="gstr2form.get('inumb2bur').errors.required">
+
+                inumb2bur of the Tax Payer required
+
+               </span>
+
+           </span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="idtb2bur" class="control-label">idt</label>
+                <input type="text" class="form-control" formControlName="idtb2bur">
+                <!-- validation-->
+
+               <span style="color:red"
+               *ngIf="gstr2form.get('idtb2bur').touched && gstr2form.get('idtb2bur').invalid">
+
+               <span *ngIf="gstr2form.get('idtb2bur').errors.required">
+
+                idtb2bur of the Tax Payer required
+
+               </span>
+
+           </span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="valb2bur" class="control-label">val</label>
+                <input type="number" class="form-control" formControlName="valb2bur">
+                <!-- validation-->
+
+               <span style="color:red"
+               *ngIf="gstr2form.get('valb2bur').touched && gstr2form.get('valb2bur').invalid">
+
+               <span *ngIf="gstr2form.get('valb2bur').errors.required">
+
+                valb2bur of the Tax Payer required
+
+               </span>
+
+           </span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="posb2bur" class="control-label">pos</label>
+                <input type="text" class="form-control" formControlName="posb2bur">
+                <!-- validation-->
+
+               <span style="color:red"
+               *ngIf="gstr2form.get('posb2bur').touched && gstr2form.get('posb2bur').invalid">
+
+               <span *ngIf="gstr2form.get('posb2bur').errors.required">
+
+                posb2bur of the Tax Payer required
+
+               </span>
+
+           </span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="sply_tyb2bur" class="control-label">sply_ty</label>
+                <input type="text" class="form-control" formControlName="sply_tyb2bur">
+                <!-- validation-->
+
+               <span style="color:red"
+               *ngIf="gstr2form.get('sply_tyb2bur').touched && gstr2form.get('sply_tyb2bur').invalid">
+
+               <span *ngIf="gstr2form.get('sply_tyb2bur').errors.required">
+
+                sply_tyb2bur of the Tax Payer required
+
+               </span>
+
+           </span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <h4>itms</h4>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for=" numb2bur" class="control-label">num</label>
+                <input type="number" class="form-control" formControlName="numb2bur">
+                <!-- validation-->
+
+               <span style="color:red"
+               *ngIf="gstr2form.get('numb2bur').touched && gstr2form.get('numb2bur').invalid">
+
+               <span *ngIf="gstr2form.get('numb2bur').errors.required">
+
+                numb2bur of the Tax Payer required
+
+               </span>
+
+           </span>
+            </div>
+        </div>
+    </div>
+
+
+
+    <h4>itm_det</h4>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="rtb2bur" class="control-label">rt</label>
+                <input type="number" class="form-control" formControlName="rtb2bur">
+                <!-- validation-->
+
+               <span style="color:red"
+               *ngIf="gstr2form.get('rtb2bur').touched && gstr2form.get('rtb2bur').invalid">
+
+               <span *ngIf="gstr2form.get('rtb2bur').errors.required">
+
+                tx_cscdn of the Tax Payer required
+
+               </span>
+
+           </span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">txval</label>
+                <input type="number" class="form-control" formControlName="txvalb2bur">
+                <!-- validation-->
+
+               <span style="color:red"
+               *ngIf="gstr2form.get('tx_cscdn').touched && gstr2form.get('tx_cscdn').invalid">
+
+               <span *ngIf="gstr2form.get('tx_cscdn').errors.required">
+
+                tx_cscdn of the Tax Payer required
+
+               </span>
+
+           </span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">iamt</label>
+                <input type="number" class="form-control" formControlName="iamtb2bur">
+                <!-- validation-->
+
+               <span style="color:red"
+               *ngIf="gstr2form.get('tx_cscdn').touched && gstr2form.get('tx_cscdn').invalid">
+
+               <span *ngIf="gstr2form.get('tx_cscdn').errors.required">
+
+                tx_cscdn of the Tax Payer required
+
+               </span>
+
+           </span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">camt</label>
+                <input type="number" class="form-control" formControlName="camtb2bur">
+                <!-- validation-->
+
+               <span style="color:red"
+               *ngIf="gstr2form.get('tx_cscdn').touched && gstr2form.get('tx_cscdn').invalid">
+
+               <span *ngIf="gstr2form.get('tx_cscdn').errors.required">
+
+                tx_cscdn of the Tax Payer required
+
+               </span>
+
+           </span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">samt</label>
+                <input type="number" class="form-control" formControlName="samtb2bur">
+                <!-- validation-->
+
+               <span style="color:red"
+               *ngIf="gstr2form.get('tx_cscdn').touched && gstr2form.get('tx_cscdn').invalid">
+
+               <span *ngIf="gstr2form.get('tx_cscdn').errors.required">
+
+                tx_cscdn of the Tax Payer required
+
+               </span>
+
+           </span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">csamt</label>
+                <input type="number" class="form-control" formControlName="csamtb2bur">
+                <!-- validation-->
+
+               <span style="color:red"
+               *ngIf="gstr2form.get('tx_cscdn').touched && gstr2form.get('tx_cscdn').invalid">
+
+               <span *ngIf="gstr2form.get('tx_cscdn').errors.required">
+
+                tx_cscdn of the Tax Payer required
+
+               </span>
+
+           </span>
+            </div>
+        </div>
+    </div>
+
+
+    <h4>itc</h4>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">elg</label>
+                <input type="text" class="form-control" formControlName="elgb2bur">
+                <!-- validation-->
+
+               <span style="color:red"
+               *ngIf="gstr2form.get('tx_cscdn').touched && gstr2form.get('tx_cscdn').invalid">
+
+               <span *ngIf="gstr2form.get('tx_cscdn').errors.required">
+
+                tx_cscdn of the Tax Payer required
+
+               </span>
+
+           </span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">tx_i</label>
+                <input type="number" class="form-control" formControlName="tx_ib2bur">
+                <!-- validation-->
+
+               <span style="color:red"
+               *ngIf="gstr2form.get('tx_cscdn').touched && gstr2form.get('tx_cscdn').invalid">
+
+               <span *ngIf="gstr2form.get('tx_cscdn').errors.required">
+
+                tx_cscdn of the Tax Payer required
+
+               </span>
+
+           </span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">tx_s</label>
+                <input type="number" class="form-control" formControlName="tx_sb2bur">
+                <!-- validation-->
+
+               <span style="color:red"
+               *ngIf="gstr2form.get('tx_cscdn').touched && gstr2form.get('tx_cscdn').invalid">
+
+               <span *ngIf="gstr2form.get('tx_cscdn').errors.required">
+
+                tx_cscdn of the Tax Payer required
+
+               </span>
+
+           </span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">tx_c</label>
+                <input type="number" class="form-control" formControlName="tx_cb2bur">
+                <!-- validation-->
+
+               <span style="color:red"
+               *ngIf="gstr2form.get('tx_cscdn').touched && gstr2form.get('tx_cscdn').invalid">
+
+               <span *ngIf="gstr2form.get('tx_cscdn').errors.required">
+
+                tx_cscdn of the Tax Payer required
+
+               </span>
+
+           </span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">tx_cs</label>
+                <input type="number" class="form-control" formControlName="tx_csb2bur">
+                <!-- validation-->
+
+               <span style="color:red"
+               *ngIf="gstr2form.get('tx_cscdn').touched && gstr2form.get('tx_cscdn').invalid">
+
+               <span *ngIf="gstr2form.get('tx_cscdn').errors.required">
+
+                tx_cscdn of the Tax Payer required
+
+               </span>
+
+           </span>
+            </div>
+        </div>
+    </div>
+    </div>
+  
+<button type="button" class="btn btn-success"
+                          (click)="savegstr2(gstr2form.value)">Add</button>
+
+                      <button type="button" class="btn btn-danger ml-4"
+                          (click)="gstr2form.reset()">Cancel</button>
+                      <button type="button" class="btn btn-warning ml-4" (click)="gstr2b2bur()">Back</button>
+    </form>
+    
+  
+   <!-- b2bur ends -->

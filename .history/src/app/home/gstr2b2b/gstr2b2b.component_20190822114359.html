@@ -1,0 +1,68 @@
+<!-- <p>
+  gstr2b2b works!
+</p> -->
+<div class="app-title">
+  <div>
+    <h1><i class="fa fa-th-list"></i> B2B-Invoice</h1>
+  </div>
+  <ul class="app-breadcrumb breadcrumb">
+  </ul>
+</div>
+<div class="row">
+  <div class="col-md-3">
+    <div class="form-group">
+      <input type="text" class="form-control" [(ngModel)]="term" placeholder="Search Here...">
+    </div>
+  </div>
+  <div class="col-md-9">
+    <button type="button" style="margin-bottom:8px" class="btn btn-info float-right" data-toggle="modal"
+      data-backdrop="static" data-target="#myModal1"  (click)="addbutton()" >Add</button>
+  </div>
+</div>
+<div class="tile">
+
+  <table class="table">
+    <thead>
+      <tr style="font-size:15px">
+
+        <th>Counter party GSTIN</th>
+        <th>invoice number</th>
+        <th>Invoice date</th>
+        <th>Differential value</th>
+        <th>Place of Supply</th>
+        <th>Reverse Charge</th>
+        <th>Ecom Operator Gstin</th>
+        <th>Invoice type</th>
+        <th>Differential percentage</th>
+        <th> Serial no</th>
+        <th>Rate of Invoice</th>
+        <th>Taxable value</th>
+        <th>IGST Amount as per invoice</th>
+        <th>Cess Amount as per invoice</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let gst of b2b;let i=index">
+
+        <td>{{gst.ctin}}</td>
+        <td>{{gst.inv.inum}}</td>
+        <td>{{gst.inv[0].idt}}</td>
+        <td>{{gst.inv[0].val}}</td>
+        <td>{{gst.inv[0].pos}}</td>
+        <td>{{gst.inv[0].rchrg}}</td>
+        <td>{{gst.inv[0].etin}}</td>
+        <td>{{gst.inv[0].inv_typ}}</td>
+        <td>{{gst.b2b[0].inv[0].diff_percent}}</td>
+        <td>{{gst.b2b[0].inv[0].itms[0].num}}</td>
+      
+        <td>{{gst.b2b[0].inv[0].itms[0].itm_det.rt}}</td>
+        <td>{{gst.b2b[0].inv[0].itms[0].itm_det.txval}}</td>
+        <td>{{gst.b2b[0].inv[0].itms[0].itm_det.iamt}}</td>
+        <td>{{gst.b2b[0].inv[0].itms[0].itm_det.csamt}}</td>
+     
+
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,63 @@
+<br><br>
+<div class="app-title">
+    <div>
+      <h1><i class="fa fa-th-list"></i> CDN-Invoice</h1>
+    </div>
+    <ul class="app-breadcrumb breadcrumb">
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="term" placeholder="Search Here...">
+      </div>
+    </div>
+    <div class="col-md-9">
+      <button type="button" style="margin-bottom:8px" class="btn btn-info float-right" data-toggle="modal"
+        data-backdrop="static" data-target="#myModal1"  (click)="gstr2cdn()">CDN FORM</button>&nbsp;&nbsp;
+        <button type="button" style="margin-bottom:8px" class="btn btn-success float-right" data-toggle="modal"
+        data-backdrop="static" data-target="#myModal1"  (click)="backgstr2b2b()">gstr2 dashboard</button>
+    </div>
+  </div>
+  <div class="tile">
+  
+    <table class="table">
+      <thead>
+        <tr style="font-size:15px">
+  
+         
+          <!-- <th>ctin</th> -->
+          <th>nt_num</th>
+          <th>nt_dt</th>
+          <th>rsn</th>
+          <th>p_gst</th>
+          <th>rt</th>
+          <th>txval</th>
+          <th>elg</th>
+          <th>tx_c</th>
+          <th>tx_cs</th>
+          
+        </tr>
+      </thead>
+      <tbody>
+  
+        <tr *ngFor="let gst of cdndata;let i=index |filter=term">
+  
+           <!-- <td>{{gst.ctin}}</td>  -->
+          <td>{{gst.nt_num}}</td>
+          <td>{{gst.nt_dt}}</td>
+          <td>{{gst.rsn}}</td>
+          <td>{{gst.p_gst}}</td>
+          <td>{{gst.itms[0].itm_det.rt}}</td>
+          
+          <td>{{gst.itms[0].itm_det.txval}}</td>
+          <td>{{gst.itms[0].itc.elg}}</td>
+        
+          <td>{{gst.itms[0].itc.tx_c}}</td>
+          <td>{{gst.itms[0].itc.tx_cs}}</td>
+          
+       
+        </tr>
+      </tbody>
+    </table>
+  </div>

@@ -1,0 +1,145 @@
+<form [formGroup]="gstr2form">
+   
+  <div class="tile">
+
+    <h4>b2bur</h4>
+    <h4>inv</h4>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">chksum</label>
+                <input type="text" class="form-control" formControlName="chksumb2bur">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="lastname" class="control-label">inum</label>
+                <input type="text" class="form-control" formControlName="inumb2bur">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="lastname" class="control-label">idt</label>
+                <input type="text" class="form-control" formControlName="idtb2bur">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="lastname" class="control-label">val</label>
+                <input type="number" class="form-control" formControlName="valb2bur">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="lastname" class="control-label">pos</label>
+                <input type="text" class="form-control" formControlName="posb2bur">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="lastname" class="control-label">sply_ty</label>
+                <input type="text" class="form-control" formControlName="sply_tyb2bur">
+            </div>
+        </div>
+    </div>
+
+
+
+    <h4>itms</h4>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for=" firstname" class="control-label">num</label>
+                <input type="number" class="form-control" formControlName="numb2bur">
+            </div>
+        </div>
+    </div>
+
+
+
+    <h4>itm_det</h4>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label for="firstname" class="control-label">rt</label>
+                <input type="number" class="form-control" formControlName="rtb2bur">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">txval</label>
+                <input type="number" class="form-control" formControlName="txvalb2bur">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">iamt</label>
+                <input type="number" class="form-control" formControlName="iamtb2bur">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">camt</label>
+                <input type="number" class="form-control" formControlName="camtb2bur">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">samt</label>
+                <input type="number" class="form-control" formControlName="samtb2bur">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">csamt</label>
+                <input type="number" class="form-control" formControlName="csamtb2bur">
+            </div>
+        </div>
+    </div>
+
+
+    <h4>itc</h4>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">elg</label>
+                <input type="text" class="form-control" formControlName="elgb2bur">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">tx_i</label>
+                <input type="number" class="form-control" formControlName="tx_ib2bur">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">tx_s</label>
+                <input type="number" class="form-control" formControlName="tx_sb2bur">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">tx_c</label>
+                <input type="number" class="form-control" formControlName="tx_cb2bur">
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group form-group-sm">
+                <label for="firstname" class="control-label">tx_cs</label>
+                <input type="number" class="form-control" formControlName="tx_csb2bur">
+            </div>
+        </div>
+    </div>
+    </div>
+  
+<button type="button" class="btn btn-success"
+                          (click)="savegstr2obj(gstr2form.value)">Add</button>
+
+                      <button type="button" class="btn btn-danger ml-4"
+                          (click)="gstr2form.reset()">Cancel</button>
+                      <button type="button" class="btn btn-warning ml-4" (click)="gstr2b2bur()">Back</button>
+    </form>
+    
+  
+   <!-- b2bur ends -->

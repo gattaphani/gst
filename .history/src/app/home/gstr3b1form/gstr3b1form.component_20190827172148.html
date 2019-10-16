@@ -1,0 +1,189 @@
+<p>
+  gstr3b1form works!
+</p>
+<br><br>
+<form [formGroup]="gstr3bform">
+    <div class="tile">
+      <h4>Details of Outward & Inward Supplies liable to reverse charge</h4>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="form-group form-group-sm">
+            <label for="gstin" class="control-label">gstin</label>
+            <input type="text" class="form-control" id="firstname" formControlName="gstin">
+            <!-- validation-->
+
+            <span style="color:red"
+            *ngIf="gstr3bform.get('gstin').touched && gstr3bform.get('gstin').invalid">
+
+            <span *ngIf="gstr3bform.get('gstin').errors.required">
+
+               gstin of the Tax Payer required
+
+            </span>
+
+        </span>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="form-group">
+            <label for="ret_period" class="control-label">ret_period</label>
+            <input type="number" class="form-control" id="lastname" formControlName="ret_period">
+            <!-- validation-->
+
+            <span style="color:red"
+            *ngIf="gstr3bform.get('ret_period').touched && gstr3bform.get('ret_period').invalid">
+
+            <span *ngIf="gstr3bform.get('ret_period').errors.required">
+
+              ret_period of the Tax Payer required
+
+            </span>
+
+        </span>
+          </div>
+        </div>
+      </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th>Nature of supplies</th>
+            <th>Total taxable value</th>
+            <th>Integrated tax</th>
+            <th>Central tax</th>
+            <th>State/UT Tax</th>
+            <th>Cess</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">(a).Outward taxable supplies (other than zero rated, nil rated and exempted)
+            </th>
+            <td>
+              <div class="form-group">
+                <label for="lastname" class="control-label">txval</label>
+                <input type="number" placeholder="Enter number" class="form-control" id="lastname" formControlName="txval">
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <label for="lastname" class="control-label">iamt</label>
+                <input type="number"  placeholder="Enter number" class="form-control" id="lastname" formControlName="iamt">
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <label for="lastname" class="control-label">camt</label>
+                <input type="number" placeholder="Enter number" class="form-control" id="lastname" formControlName="camt">
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <label for="lastname" class="control-label">samt</label>
+                <input type="number" placeholder="Enter number" class="form-control" id="lastname" formControlName="samt">
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <label for="lastname" class="control-label">csamt</label>
+                <input type="number" placeholder="Enter number" class="form-control" id="lastname" formControlName="csamt">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">(b).Outward taxable supplies (zero rated )
+            </th>
+            <td>
+              <div class="form-group">
+                <label for="lastname" class="control-label">txval</label>
+                <input type="number"  placeholder="" class="form-control" id="lastname" formControlName="txval">
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <label for="lastname" class="control-label">iamt</label>
+                <input type="number" class="form-control" id="lastname" formControlName="iamt">
+              </div>
+            </td>
+            <td colspan="1"></td>
+            <td>
+              <div class="form-group">
+                <label for="lastname" class="control-label">samt</label>
+                <input type="number"  placeholder="" class="form-control" id="lastname" formControlName="samt">
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <label for="lastname" class="control-label">csamt</label>
+                <input type="number"  placeholder="" class="form-control" id="lastname" formControlName="csamt">
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">(c).Other outward supplies (Nil rated, exempted)
+            </th>
+            <td>
+              <div class="form-group">
+                <label for="lastname" class="control-label">txval</label>
+                <input type="number"  placeholder="" class="form-control" id="lastname" formControlName="txval">
+              </div>
+            </td>
+            <td colspan="4"></td>
+    
+          </tr>
+          <tr>
+            <th scope="row">(d).Inward supplies (liable to reverse charge)
+            </th>
+            <td>
+              <div class="form-group">
+                <label for="lastname" class="control-label">txval</label>
+                <input type="number"  placeholder="" class="form-control" id="lastname" formControlName="txval">
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <label for="lastname" class="control-label">iamt</label>
+                <input type="number"  placeholder="" class="form-control" id="lastname" formControlName="iamt">
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <label for="lastname" class="control-label">camt</label>
+                <input type="number"  placeholder="" class="form-control" id="lastname" formControlName="camt">
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <label for="lastname" class="control-label">samt</label>
+                <input type="number"  placeholder="" class="form-control" id="lastname" formControlName="samt">
+              </div>
+            </td>
+            <td>
+              <div class="form-group">
+                <label for="lastname" class="control-label">csamt</label>
+                <input type="number"  placeholder="" class="form-control" id="lastname" formControlName="csamt">
+              </div>
+            </td>
+    
+          </tr>
+          <tr>
+            <th scope="row">(e).Non-GST outward supplies
+            </th>
+            <td>
+              <div class="form-group">
+                <label for="lastname" class="control-label">txval</label>
+                <input type="number"  placeholder="" class="form-control" id="lastname" formControlName="txval">
+              </div>
+            </td>
+            <td colspan="4"></td>
+    
+          </tr>
+        </tbody>
+      </table>
+      <button type="button" (click)="savegst3bobj(gstr3bform.value)" class="btn btn-primary pull-right">Add</button>&nbsp;&nbsp;
+      <button type="button" class="btn btn-success pull-right">Cancel</button>&nbsp;&nbsp;
+      <button type="button" class="btn btn-success pull-right" (click)="gstr3b()">Back</button>
+      <br><br>
+    </div>
+    </form>
+    
+    

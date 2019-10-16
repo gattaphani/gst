@@ -1,0 +1,142 @@
+<div class="container ">
+
+  <div class="row">
+
+    <div class="col-md-6 offset-md-3">
+
+      <h2>GST Registration Form</h2><br>
+
+
+
+      <form [formGroup]="gstrform">
+
+        <div class="form-group">
+
+          <input type="radio" name="gender" value="male"> New Registratiion
+
+          <input type="radio" name="gender" value="male"> Temporary Reference number<br>
+
+        </div>
+
+        <label for="sel1"><b>Iam a</b></label><br><br>
+
+
+
+        <br>
+
+
+        <select class="form-control" formControlName="iam">
+
+          <option value="volvo">Tax provider</option>
+
+          <option value="saab">Tax disributor</option>
+
+          <option value="opel">tax collector</option>
+
+          <option value="audi">assam</option>
+
+          <option value="audi">punjab</option>
+
+          <option value="audi">maharasrta</option>
+
+          <option value="audi">karnataka</option> -->
+
+        </select><br>
+
+
+        <label for="sel1"><b>State</b></label><br><br>
+
+        <select class="form-control" formControlName="stateName">
+
+          <option *ngFor="let s of gstrArr.email">{{s}}</option>
+
+          <option value="saab">Andhra</option>
+
+          <option value="opel">Tamilnadu</option>
+
+          <option value="audi">assam</option>
+
+          <option value="audi">punjab</option>
+
+          <option value="audi">maharasrta</option>
+
+          <option value="audi">karnataka</option> -->
+
+        </select><br>
+
+        <br>
+
+        <label for="sel1"><b>District</b></label><br><br>
+
+
+
+        <select class="form-control" formControlName="districtName">
+
+          <option *ngFor="let s of gstrArr.district">{{s.districtName}}</option>
+
+          <option value="saab">East godhavari</option>
+
+          <option value="opel">karnool</option>
+
+          <option value="audi">prakasam</option>
+
+          <option value="audi">ongole</option>
+
+          <option value="audi">krishna</option>
+
+          <option value="audi">medak</option>
+
+          -->
+
+        </select><br>
+
+        <br>
+
+        <label for="email">Legal Name of the Business (As mentioned in PAN):</label>
+
+        <br>
+
+
+        <input type="email" class="form-control" placeholder="Enter Legal Name of the Business (As mentioned in PAN)"
+          name="business name" formControlName="legalname"><br><br>
+
+
+
+        <div class="form-group">
+
+          <label for="email">Permanent Account Number (PAN):
+          </label><br>
+
+          <input type="email" class="form-control" placeholder="Enter Permanent Account Number (PAN)" name="Pan number"
+            formControlName="pan"><br><br>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="email">Email Address :</label><br>
+
+          <input type="email" class="form-control" placeholder="Enter email" name="email"
+            formControlName="email"><br><br>
+
+        </div>
+
+        <div class="form-group">
+
+          <label for="email">Mobile Number :
+          </label><br>
+
+          <input type="email" class="form-control" placeholder="Mobile Number" name="number"
+            formControlName="mobile"><br><br>
+
+          <button type="button" class="btn btn-primary" ()>Primary</button>
+
+        </div>
+
+      </form>
+
+    </div>
+
+  </div>
+
+</div>

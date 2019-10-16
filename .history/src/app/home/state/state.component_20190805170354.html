@@ -1,0 +1,162 @@
+<div class="app-title">
+    <div>
+      <h1><i class="fa fa-th-list"></i>State List</h1>
+    </div>
+    <ul class="app-breadcrumb breadcrumb">
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="term" placeholder="Search Here...">
+      </div>
+    </div>
+    <div class="col-md-9">
+      <button type="button" style="margin-bottom:8px" class="btn btn-danger float-right" data-toggle="modal"
+        data-backdrop="static" data-target="#myModal" (click)="formReset(myForm)">Add</button>
+    </div>
+  </div>
+  <div class="tile">
+  
+    <table class="table">
+      <thead>
+        <tr style="font-size:15px">
+   
+          <th>State List</th>
+          <th>Email</th>
+          <th>Updated By</th>
+          <th>Updated Date</th>
+          <th>Action</th>
+          <th>Edit</th>
+        </tr>
+      </thead>
+      <tbody>
+  
+        <tr *ngFor="let emp of stateList | filter:term |paginate: { itemsPerPage: 5, currentPage: p };let i=index">
+       
+          <td>{{emp.stateName}}</td>
+          <td>{{emp.email}}</td>
+          <td>{{emp.lastUpdatedBy}}</td>
+          <td>{{emp.updatedDate}}</td>
+          <td *ngIf="emp.status == 'Active'"><span [ngClass]="{'status1': emp.status=='Inactive', 'status2':emp.status=='Active' }" (click)="statusState(emp)">Disable</span></td>
+          <td *ngIf="emp.status == 'Inactive'"><span [ngClass]="{'status1': emp.status=='Inactive', 'status2':emp.status=='Active' }" (click)="statusState(emp)">Enable</span></td>
+          <td>
+            <span>
+              <span (click)="edit(emp.id)" data-toggle="modal" data-target="#myModal1"
+                class="glyphicon glyphicon-pencil">
+                <i class="fa fa-edit" style="font-size:24px;color:rgb(49, 17, 233)"></i>
+              </span>
+            </span>
+          </td>
+          <td>
+   
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <pagination-controls (pageChange)="p = $event" class="pull-right"></pagination-controls>
+  
+   <!-- Add Employement Type Modal-->
+  
+  
+   <div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+        <div class="modal-content">
+          <form #myForm="ngForm">
+          <div class="modal-header">
+            <h4 class="modal-title">Add State Name</h4>
+            <button type="button" class="close" (click)="myForm.reset()" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+  
+            <div class="col-md-12">
+              <label>State Name</label>
+     
+              <input type="text" placeholder="Enter State Name" [(ngModel)]="stateName" name="stateName"
+                class="form-control" #StateName="ngModel" required>
+                <span style="color:red" *ngIf="StateName.invalid &&StateName.touched ">
+               
+                    <span *ngIf="StateName.errors.required">
+                      State Name is required.
+                    </span>
+                 
+                 
+                </span> 
+              </div>
+  
+              <div class="col-md-12">
+                <label>Email</label>
+       
+                <input type="text" placeholder="Enter Email" [(ngModel)]="email" name="Email"
+                  class="form-control" #Email="ngModel" required >
+                  <span style="color:red" *ngIf="Email.invalid &&Email.touched ">
+                 
+                      <span *ngIf="Email.errors.required">
+                        Email is required.
+                      </span>
+                     
+                   
+                  </span> 
+                </div>
+           
+          </div>
+          <div class="modal-footer">
+            <button type="submit" data-dismiss="modal"
+              class="btn btn-primary float-right" id="register" (click)="create()" data-dismiss="modal" [disabled]="myForm.invalid" >Submit</button>
+          </div>
+        </form>
+        </div>
+     
+    </div>
+  </div> 
+  
+   <!-- Add Employement Type Modal-->
+  
+   <!-- Update Employement Type Modal-->
+  
+  <div id="myModal1" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <form [formGroup]="statemasterForm">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Update State Name</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+  
+            <div class="col-md-12">
+              <label>State Name</label>
+              <input type="text" placeholder="Enter State Name" formControlName="stateName" name="eventName"
+                class="form-control">
+                <span style="color:red" *ngIf = "statemasterForm.get('stateName').touched && statemasterForm.get('stateName').invalid">
+                    <span *ngIf = "statemasterForm.get('stateName').errors.required">
+                   State Name is required
+                  </span>
+                </span> 
+              </div>
+              <div class="col-md-12">
+                <label>Email</label>
+                <input type="text" placeholder="Enter Email" formControlName="email" name="Email"
+                  class="form-control">
+                  <span style="color:red" *ngIf = "statemasterForm.get('email').touched && statemasterForm.get('email').invalid">
+                      <span *ngIf = "statemasterForm.get('email').errors.required">
+                 Email is required
+                    </span>
+                  </span> 
+                </div>
+  
+         
+          </div>
+          <div class="modal-footer">
+       
+            <button type="button" [disabled]="statemasterForm.invalid" data-dismiss="modal"
+              class="btn btn-primary float-right" id="register" (click)="updateState(statemasterForm.value)"
+              >Update</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>

@@ -1,0 +1,66 @@
+<br><br>
+<div class="app-title">
+    <div>
+      <h1><i class="fa fa-th-list"></i> CDN-Invoice</h1>
+    </div>
+    <ul class="app-breadcrumb breadcrumb">
+    </ul>
+  </div>
+  <div class="row">
+    <div class="col-md-3">
+      <div class="form-group">
+        <input type="text" class="form-control" [(ngModel)]="term" placeholder="Search Here...">
+      </div>
+    </div>
+    <div class="col-md-9">
+      <button type="button" style="margin-bottom:8px" class="btn btn-info float-right" data-toggle="modal"
+        data-backdrop="static" data-target="#myModal1"  (click)="gstr2b2b()">CDN FORM</button>&nbsp;&nbsp;
+        <button type="button" style="margin-bottom:8px" class="btn btn-success float-right" data-toggle="modal"
+        data-backdrop="static" data-target="#myModal1"  (click)="backgstr2b2b()">gstr2 dashboard</button>
+    </div>
+  </div>
+  <div class="tile">
+  
+    <table class="table">
+      <thead>
+        <tr style="font-size:15px">
+  
+          <!-- <th>Counter party GSTIN</th> -->
+          <th>invoice number</th>
+          <th>Invoice date</th>
+          <th>Differential value</th>
+          <th>Place of Supply</th>
+          <th>Reverse Charge</th>
+         
+          <th>Invoice type</th>
+          
+          <th> num</th>
+          <th>elg</th>
+          <th>tx_i</th>
+          <th>rt</th>
+          <th>Cess Amount as per invoice</th>
+        </tr>
+      </thead>
+      <tbody>
+  
+        <tr *ngFor="let gst of b2b;let i=index">
+  
+          <!-- <td>{{gst.ctin}}</td> -->
+          <td>{{gst.inum}}</td>
+          <td>{{gst.idt}}</td>
+          <td>{{gst.val}}</td>
+          <td>{{gst.pos}}</td>
+          <td>{{gst.rchrg}}</td>
+          
+          <td>{{gst.inv_typ}}</td>
+          <td>{{gst.itms[0].num}}</td>
+        
+          <td>{{gst.itms[0].itc.elg}}</td>
+          <td>{{gst.itms[0].itc.tx_i}}</td>
+          <td>{{gst.itms[0].itm_det.iamt}}</td>
+          <td>{{gst.itms[0].itm_det.camt}}</td>
+       
+        </tr>
+      </tbody>
+    </table>
+  </div>

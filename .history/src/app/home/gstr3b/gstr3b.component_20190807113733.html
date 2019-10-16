@@ -1,0 +1,413 @@
+
+<!-- invoice start -->
+<div class="container">
+  <div class="row">
+    <h3>Save  GSTR3B </h3>			
+  </div>
+  <form [formGroup]="">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group form-group-sm">
+          <label for="firstname" class="control-label">gstin</label>
+          <input type="text" class="form-control" id="firstname" formControlName="gstin">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="lastname" class="control-label">ret_period</label>
+          <input type="number" class="form-control" id="lastname" formControlName="ret_period">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="lastname" class="control-label">txval</label>
+          <input type="number" class="form-control" id="lastname" formControlName="txval">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="lastname" class="control-label">iamt</label>
+          <input type="number" class="form-control" id="lastname" formControlName="iamt">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="lastname" class="control-label">camt</label>
+          <input type="text" class="form-control" id="lastname" formControlName="camt">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="lastname" class="control-label">samt</label>
+          <input type="text" class="form-control" id="lastname" formControlName="samt">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="lastname" class="control-label">csamt</label>
+          <input type="date" class="form-control" id="lastname" formControlName="idt">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="lastname" class="control-label">val</label>
+          <input type="number" class="form-control" id="lastname" formControlName="val">
+        </div>
+      </div>
+    </div>
+   
+    
+    <div class="row">
+      <h2>Item Details</h2><br><br>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="form-group form-group-sm">
+          <label for="firstname" class="control-label">pos</label>
+          <input type="number" class="form-control" id="firstname" formControlName="pos">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group form-group-sm">
+          <label for="firstname" class="control-label">rchrg</label>
+          <input type="text" class="form-control" id="firstname" formControlName="rchrg">
+
+          <span style="color:red" *ngIf="gstinvoiceform.get('rchrg').touched && gstinvoiceform.get('rchrg').invalid">
+
+            <span *ngIf="gstinvoiceform.get('rchrg').errors.required">
+
+              Name of the candidate is required
+
+            </span>
+
+            <span *ngIf="gstinvoiceform.get('rchrg').errors.pattern">
+
+              Only single Character is allowed
+
+            </span>
+
+          </span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group form-group-sm">
+          <label for="firstname" class="control-label">etin</label>
+          <input type="text" class="form-control" id="firstname" formControlName="etin">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group form-group-sm">
+          <label for="firstname" class="control-label">inv_typ</label>
+          <input type="text" class="form-control" id="firstname" formControlName="inv_typ">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group form-group-sm">
+          <label for="firstname" class="control-label">diff_percent</label>
+          <input type="number" class="form-control" id="firstname" formControlName="diff_percent">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group form-group-sm">
+          <label for="firstname" class="control-label">num</label>
+          <input type="number" class="form-control" id="firstname" formControlName="num">
+        </div>
+      </div>
+      <!-- <div class="col-md-4">
+                          <div class="form-group form-group-sm">
+                              <label for="firstname" class="control-label">itm_det</label>
+                              <input type="text" class="form-control" id="firstname" formControlName="itm_det" >
+                          </div>
+                      </div> -->
+      <div class="col-md-4">
+        <div class="form-group form-group-sm">
+          <label for="firstname" class="control-label">rt</label>
+          <input type="number" class="form-control" id="firstname" formControlName="rt">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group form-group-sm">
+          <label for="firstname" class="control-label">txval</label>
+          <input type="number" class="form-control" id="firstname" formControlName="txval">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group form-group-sm">
+          <label for="firstname" class="control-label">iamt</label>
+          <input type="number" class="form-control" id="firstname" formControlName="iamt">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group form-group-sm">
+          <label for="firstname" class="control-label">csamt</label>
+          <input type="number" class="form-control" id="firstname" formControlName="csamt">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group form-group-sm">
+          <label for="firstname" class="control-label">oinum</label>
+          <input type="text" class="form-control" id="firstname" formControlName="oinum">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group form-group-sm">
+          <label for="firstname" class="control-label">oidt</label>
+          <input type="date" class="form-control" id="firstname" formControlName="oidt">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group form-group-sm">
+          <label for="firstname" class="control-label">camt</label>
+          <input type="number" class="form-control" id="firstname" formControlName="camt">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group form-group-sm">
+          <label for="firstname" class="control-label">samt</label>
+          <input type="number" class="form-control" id="firstname" formControlName="samt">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group form-group-sm">
+          <label for="firstname" class="control-label">sply_ty</label>
+          <input type="text" class="form-control" id="firstname" formControlName="sply_ty">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group form-group-sm">
+          <label for="firstname" class="control-label">typ</label>
+          <input type="text" class="form-control" id="firstname" formControlName="typ">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group form-group-sm">
+          <label for="firstname" class="control-label">omon</label>
+          <input type="number" class="form-control" id="firstname" formControlName="omon">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group form-group-sm">
+          <label for="firstname" class="control-label">expt_amt</label>
+          <input type="number" class="form-control" id="firstname" formControlName="expt_amt">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group form-group-sm">
+          <label for="firstname" class="control-label">nil_amt</label>
+          <input type="number" class="form-control" id="firstname" formControlName="nil_amt">
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group form-group-sm">
+          <label for="firstname" class="control-label">ngsup_amt</label>
+          <input type="number" class="form-control" id="firstname" formControlName="ngsup_amt">
+        </div>
+      </div>
+      <!-- <div class="col-md-4">
+                              <div class="form-group form-group-sm">
+                              <label for="firstname" class="control-label">Tax.Value()*</label>
+                          <input type="text" class="form-control" id="firstname" formControlName="" >
+                                                                                      </div>
+                                                                                  </div> -->
+      <!-- <div class="col-md-4">
+                          <div class="form-group form-group-sm">
+                                      <label for="firstname" class="control-label">Tax.Value()*</label>
+                                      <input type="text" class="form-control" id="firstname" formControlName="etin" >
+                                                                                          </div>
+                                                                                      </div> -->
+      <!-- <div class="col-md-4">
+                          <div class="form-group form-group-sm">
+                          <label for="firstname" class="control-label">etin</label>
+                          <input type="text" class="form-control" id="firstname" formControlName="etin" >
+                                                                                              </div>
+                                                                                          </div> -->
+
+    </div>
+    <button type="button" class="btn btn-success" >Add</button>
+    <button type="button" class="btn btn-danger">Cancel</button>
+  </form>
+</div>
+
+<!-- {
+  "gstin": "05AVHPB7348G1ZP",
+  "ret_period": "042017",
+  "sup_details": {
+    "osup_det": {
+      "txval": 250,
+      "iamt": 100,
+      "camt": 200,
+      "samt": 300,
+      "csamt": 400
+    },
+    "osup_zero": {
+      "txval": 250,
+      "iamt": 100,
+      "csamt": 400
+    },
+    "osup_nil_exmp": {
+      "txval": 250
+    },
+    "isup_rev": {
+      "txval": 250,
+      "iamt": 100,
+      "camt": 200,
+      "samt": 300,
+      "csamt": 400
+    },
+    "osup_nongst": {
+      "txval": 250
+    }
+  },
+  "inter_sup": {
+    "unreg_details": [
+      {
+        "pos": "07",
+        "txval": 250,
+        "iamt": 200
+      },
+      {
+        "pos": "07",
+        "txval": 250,
+        "iamt": 200
+      },
+      {
+        "pos": "07",
+        "txval": 250,
+        "iamt": 200
+      }
+    ],
+    "comp_details": [
+      {
+        "pos": "07",
+        "txval": 250,
+        "iamt": 200
+      },
+      {
+        "pos": "07",
+        "txval": 250,
+        "iamt": 200
+      },
+      {
+        "pos": "07",
+        "txval": 250,
+        "iamt": 200
+      }
+    ],
+    "uin_details": [
+      {
+        "pos": "07",
+        "txval": 250,
+        "iamt": 200
+      },
+      {
+        "pos": "07",
+        "txval": 250,
+        "iamt": 200
+      },
+      {
+        "pos": "07",
+        "txval": 250,
+        "iamt": 200
+      }
+    ]
+  },
+  "itc_elg": {
+    "itc_avl": [
+      {
+        "ty": "IMPG",
+        "iamt": 136.53,
+        "camt": 274,
+        "samt": 162.99,
+        "csamt": 103
+      },
+      {
+        "ty": "IMPS",
+        "iamt": 136.53,
+        "camt": 274,
+        "samt": 162.99,
+        "csamt": 103
+      },
+      {
+        "ty": "ISRC",
+        "iamt": 136.53,
+        "camt": 274,
+        "samt": 162.99,
+        "csamt": 103
+      },
+      {
+        "ty": "ISD",
+        "iamt": 136.53,
+        "camt": 274,
+        "samt": 162.99,
+        "csamt": 103
+      },
+      {
+        "ty": "OTH",
+        "iamt": 136.53,
+        "camt": 274,
+        "samt": 162.99,
+        "csamt": 103
+      }
+    ],
+    "itc_rev": [
+      {
+        "ty": "RUL",
+        "iamt": 136.53,
+        "camt": 274,
+        "samt": 162.99,
+        "csamt": 103
+      },
+      {
+        "ty": "OTH",
+        "iamt": 136.53,
+        "camt": 274,
+        "samt": 162.99,
+        "csamt": 103
+      }
+    ],
+    "itc_net": {
+      "iamt": 136.53,
+      "camt": 274,
+      "samt": 162.99,
+      "csamt": 103
+    },
+    "itc_inelg": [
+      {
+        "ty": "RUL",
+        "iamt": 136.53,
+        "camt": 274,
+        "samt": 162.99,
+        "csamt": 103
+      },
+      {
+        "ty": "OTH",
+        "iamt": 136.53,
+        "camt": 274,
+        "samt": 162.99,
+        "csamt": 103
+      }
+    ]
+  },
+  "inward_sup": {
+    "isup_details": [
+      {
+        "ty": "GST",
+        "inter": 100,
+        "intra": 200
+      },
+      {
+        "ty": "NONGST",
+        "inter": 300,
+        "intra": 400
+      }
+    ]
+  },
+  "intr_ltfee": {
+    "intr_details": {
+      "iamt": 10,
+      "camt": 20,
+      "samt": 30,
+      "csamt": 40
+    }
+  }
+} -->
